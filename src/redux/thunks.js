@@ -10,8 +10,8 @@ import {
 export const loadTodos = () => async (dispatch, getState) => {
   try {
     dispatch(loadTodosInProgress())
-    // const response = await fetch('http://localhost:8080/todos')
-    const response = await fetch('http://localhost:8080/todos-delay')
+    const response = await fetch('http://localhost:8080/todos')
+    // const response = await fetch('http://localhost:8080/todos-delay')
     const todos = await response.json()
 
     dispatch(loadTodosSuccess(todos))
